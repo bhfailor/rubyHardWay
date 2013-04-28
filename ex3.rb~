@@ -1,0 +1,55 @@
+puts "I willnow count my chickens:"
+
+puts "Hens", 25 + 30 / 6
+puts "Roosters", 100 - 25 * 3 % 4
+
+puts "Now I will count the eggs:"
+
+puts 3 + 2 + 1 - 5 + 4 % 2 - 1 / 4 + 6
+
+puts "Is it true that 3 + 2 < 5 - 7?"
+
+puts 3 + 2 < 5 - 7
+
+puts "What is 3 + 2?", 3 + 2
+puts "What is 5 - 7?", 5 - 7
+
+puts "Oh, that's why it's false."
+
+puts "How about some more."
+
+puts "Is it greater?", 5 > -2
+puts "Is it greater or equal?", 5 >= -2
+puts "Is it less or equal?", 5 <= -2
+
+=begin
+# Some behaviors that I was not aware of
+# % is "mod" or "remainder" when the first number is divided by the second
+irb(main):001:0> 3 % 4
+=> 3
+irb(main):002:0> 100 - 25
+=> 75
+irb(main):003:0> 25 * 3 % 4
+=> 3
+irb(main):004:0> 25 * (3 % 4)
+=> 75
+irb(main):005:0> 4 % 2
+=> 0
+irb(main):006:0> 1/4
+=> 0
+irb(main):007:0> 1./4
+=> 0
+# Not sure why this throws an error
+irb(main):008:0> 1/4.
+irb(main):009:0*
+irb(main):010:0* 0
+SyntaxError: (irb):10: syntax error, unexpected tINTEGER
+  from /usr/local/bin/irb:12:in `<main>'
+irb(main):011:0> 1/4.0
+=> 0.25
+irb(main):012:0> 1.0/4
+=> 0.25
+# 1.0/4 is different from 1./4!
+irb(main):013:0> 1./4
+=> 0
+=end

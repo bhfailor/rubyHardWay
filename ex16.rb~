@@ -1,0 +1,10 @@
+filename = ARGV.first
+script = $0
+
+puts "We're going to erase #{filename}."
+puts "If you do not want that, hit CTRL-C (^C)."
+puts "If you do want that, hit RETURN."
+
+print "? "
+STDIN.gets
+

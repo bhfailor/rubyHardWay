@@ -1,0 +1,110 @@
+ex1
+puts - displays a string on the terminal
+"" - starts and ends a string
+'' - starts and ends a string also
+
+ex2
+# - everything after this is ignored on a line
+
+ex3
+= - value assignment to a variable
++ - addition
+- - subtraction
+/ - division
+* - multiplication
+% - modulo or remainder after dividing by the second number
+< - less than operator that returns true or false
+> - greater than ...
+>= - greater than or equals
+<= - less than or equals
+.0 - make the number floating instead of integer (I think that 0 can be replaced with any number).
+
+ex4
+"...#{foo}..." - Imbed the string value for foo in the string
+
+ex5
+string % something - if there is a %some_letter in string, then something is imbedded in the string using a format (see below)
+%some_letter - specifies the format of a variable imbedded in a string
+  for example, I have tried %s, %d, and %f:
+>> puts "He's got %s eyes and %s hair." % [eyes, pi]
+He's got green eyes and 3.14 hair.
+=> nil
+>> puts "He's got %s eyes and %d hair." % [eyes, pi]
+He's got green eyes and 3 hair.
+=> nil
+>> puts "He's got %s eyes and %f hair." % [eyes, pi]
+He's got green eyes and 3.140000 hair.
+=> nil
+Please note that:
+>> hilarious = false
+=> false
+>> j1 = "Isn't that joke so funny?! #{hilarious}"
+=> "Isn't that joke so funny?! false"
+>> j2 = "Isn't that joke so funny?! %s" % hilarious
+=> "Isn't that joke so funny?! false"
+>> j1 == j2
+=> true
+
+ex6
++ - will concatenate two strings
+
+ex7
+* - will create multiple copys of a string and concatenate them!
+print - will send a string to the terminal but not end with a line feed
+
+ex8
+trick of defining a format string to use for output, i.e.
+  >> formatter = "%s %s %s %s"
+  => "%s %s %s %s"
+  >> puts formatter % [1, 2, 3, 4]
+  1 2 3 4
+  => nil
+
+ex9
+way to enter long string but prefix with something(?) like puts or print
+puts <<PARAGRAPH
+Some
+more
+more
+the end!
+PARAGRAPH
+
+ex10
+escape sequences
+\t - tab
+\a - bell
+\n - new line
+\\ - forward slash
+# for more on escape sequences see:
+# http://en.wikibooks.org/wiki/Ruby_Programming/Strings
+
+ex11
+gets - get string from the terminal
+chomp() - remove the new line (at least when used with gets)
+STDOUT.flush - clears out the output buffer
+
+ex12
+require - insert a file at this location in another file; default extension is .rb.  For example:
+  require 'open-uri' - inserts the file open-uri.rb in the source
+open("http://www.ruby-lang.org/en") returns a StringIO object that will respond to a number of methods that include
+  :each_line - traverses the lines in the object
+  :base_uri - base uri for http request
+  :content_type - i.e. text/html
+  :charset - i.e. iso-8859-1
+  :content_encoding - not defined
+  :last_modified - returns date
+
+$LOAD_PATH - is where ruby looks to find the  required files
+
+ex13
+ARGV is the parameter list following the filename in
+  ruby filename param1 param2 param3 
+so that
+  ARGV = [param1, param2, param3]
+and you can assign
+  x, y, z = ARGV => x = param1, y = param2, etc.
+
+ex14
+ARGV is an array and responds to :first and :last, for example
+  user = ARGV.first
+STDIN is an IO class object and responds to :gets

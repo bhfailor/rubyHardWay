@@ -1,0 +1,19 @@
+ex1
+puts - displays a string on the terminal
+"" - starts and ends a string
+'' - starts and ends a string also
+
+ex2
+# - everything after this is ignored on a line
+
+ex3
++ - addition
+- - subtraction
+/ - division
+* - multiplication
+% - modulo or remainder after dividing by the second number
+< - less than operator that returns true or false
+> - greater than ...
+>= - greater than or equals
+<= - less than or equals
+.0 - make the number floating instead of integer (I think that 0 can be replaced with any number).
